@@ -1,0 +1,419 @@
+@charset "UTF-8";
+
+/* Basic Reset */
+/* Importing Google Font for elegance */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap');
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    background-color: #e6e6fa; /* Lavender background */
+    color: #4b0082; /* Dark indigo for general text */
+}
+
+/* Form and Button Styles */
+.form-control {
+    border-radius: 20px; /* Rounded corners */
+    border: 1px solid #dcdcdc; /* Light gray border */
+    padding: 10px;
+}
+
+.btn-outline-success {
+    color: #6a5acd; /* Medium slate blue text */
+    border-color: #6a5acd; /* Medium slate blue border */
+}
+
+.btn-outline-success:hover {
+    background-color: #6a5acd; /* Medium slate blue background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Card Body Styling */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list-card {
+    width: 15rem;
+    height: 24rem;
+    background-color: #e6e6fa; /* Lavender */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.list-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Container */
+.list-card-image {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.list-card-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Card Title and Text */
+.card-title {
+    font-family: 'Georgia', serif; /* Elegant serif font */
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 8px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #777;
+    margin: 3px 0;
+}
+
+/* View Details Link */
+.card-body a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 12px;
+    background-color: #87CEEB; /* Sky Blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.card-body a:hover {
+    background-color: #4682B4; /* Darker Blue */
+}
+
+/* Form Styling */
+.form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.form-label {
+    font-family: 'Georgia', serif; /* Elegant serif font */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff; /* Blue */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker Blue */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .btn-primary {
+        padding: 8px 16px;
+    }
+}
+
+/* Item Details Page */
+.body-item-details {
+    font-family: 'Georgia', serif; /* Elegant serif font */
+    background-color: #f2f2f2; /* Light gray */
+}
+
+.details-card-item-details {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #f5f3f0; /* Milky yellow */
+    border: 1px solid #e0d9d2; /* Light border color */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title-item-details {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7d4c92; /* Match nav font color */
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+}
+
+.card-text-item-details {
+    font-size: 16px;
+    color: #6d3f6c; /* Darker shade of the nav color */
+    text-align: center;
+    font-family: 'Georgia', serif; /* Elegant serif font */
+}
+
+.card-text-description-item-details {
+    font-size: 18px;
+    color: #7d4c92; /* Match nav font color */
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Georgia', serif; /* Elegant serif font */
+}
+
+.btn-primary-item-details {
+    background-color: #8e4f8d; /* Match card background color */
+    border-color: #8e4f8d; /* Match card background color */
+    color: #fff;
+    margin: 10px 5px;
+    font-family: 'Georgia', serif; /* Elegant serif font */
+}
+
+.btn-primary-item-details:hover {
+    background-color: #6d3f6c; /* Darker shade on hover */
+    border-color: #6d3f6c; /* Darker shade on hover */
+}
+
+.btn-danger-item-details {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+    margin: 10px 5px;
+    font-family: 'Georgia', serif; /* Elegant serif font */
+}
+
+.btn-danger-item-details:hover {
+    background-color: #c82333; /* Darker shade on hover */
+    border-color: #c82333; /* Darker shade on hover */
+}
+
+.btn-warning-item-details {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+    margin: 10px 5px;
+    font-family: 'Georgia', serif; /* Elegant serif font */
+}
+
+.btn-warning-item-details:hover {
+    background-color: #e0a800; /* Darker shade on hover */
+    border-color: #d39e00; /* Darker shade on hover */
+}
+
+/* Update Item Page */
+
+/* Order Page */
+.order-details-container-custom {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-header-custom {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order-header-custom h2 {
+    color: #333;
+    font-size: 24px;
+    font-family: 'Georgia', serif; /* Elegant serif font */
+}
+
+.order-info-custom {
+    margin-bottom: 20px;
+}
+
+.order-user-info-custom {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-user-info-custom label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.order-user-info-custom input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.order-items-custom {
+    margin-bottom: 20px;
+}
+
+.order-items-custom h3 {
+    color: #555;
+    font-size: 20px;
+}
+
+.order-items-custom table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-items-custom th,
+.order-items-custom td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.order-items-custom th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.order-total-custom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.order-total-custom label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.order-total-custom input {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Order Confirmation Page */
+.body-order-confirmation {
+    font-family: 'Georgia', serif; /* Elegant serif font */
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+.container-order-confirmation {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header-confirmation {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-body-confirmation {
+    padding: 20px;
+}
+
+.user-info-confirmation {
+    margin-bottom: 20px;
+}
+
+.user-info-confirmation p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.order-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.order-summary-table th,
+.order-summary-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.order-summary-table th {
+    background-color: #f4f4f4;
+}
+
+.order-fees-confirmation {
+    margin-top: 10px;
+}
+
+.order-fees-confirmation p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.btn-order-confirmation {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.btn-primary-confirmation {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary-confirmation:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary-confirmation {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary-confirmation:hover {
+    background-color: #5a6268;
+}
